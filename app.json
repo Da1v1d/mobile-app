@@ -1,22 +1,24 @@
 {
   "expo": {
     "name": "my-mobile-app",
-    "slug": "my-mobile-app",
+    "slug": "my_mobile_app",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
-    "scheme": "mymobileapp",
+    "scheme": "my.mobile.app",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.my.mobile.app"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "edgeToEdgeEnabled": true
+      "edgeToEdgeEnabled": true,
+      "package": "com.my.mobile.app"
     },
     "web": {
       "bundler": "metro",
