@@ -1,4 +1,8 @@
+/** @type {import('prettier').Config} */
 module.exports = {
+  // Plugins must be at the top level
+  plugins: ['@trivago/prettier-plugin-sort-imports'],
+
   // Basic formatting options optimized for React Native/Expo
   printWidth: 100,
   tabWidth: 2,
@@ -12,6 +16,19 @@ module.exports = {
   bracketSameLine: false,
   arrowParens: 'avoid',
   endOfLine: 'lf',
+
+  // Import sorting configuration
+  importOrder: [
+    '^react$',
+    '^react-native$',
+    '^@react-navigation/(.*)$',
+    '^expo(.*)$',
+    '^@/(.*)$',
+    '^[./]',
+  ],
+  importOrderSeparation: true,
+  importOrderSortSpecifiers: true,
+  importOrderParserPlugins: ['typescript', 'jsx', 'decorators-legacy'],
 
   // File-specific overrides for React Native/Expo
   overrides: [
