@@ -1,4 +1,4 @@
-import { Platform, StyleSheet } from 'react-native';
+import { Platform, StyleSheet, View } from 'react-native';
 
 import { Image } from 'expo-image';
 
@@ -6,6 +6,8 @@ import { HelloWave } from '@/components/HelloWave';
 import ParallaxScrollView from '@/components/ParallaxScrollView';
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
+import { Button, ButtonText } from '@/shared/components/ui/button';
+import { Text } from '@/shared/components/ui/text';
 
 export default function HomeScreen() {
   return (
@@ -22,6 +24,11 @@ export default function HomeScreen() {
         <ThemedText type='title'>Welcome!</ThemedText>
         <HelloWave />
       </ThemedView>
+      <Button action='primary' className='bg-red-400'>
+        <ButtonText>Click me</ButtonText>
+      </Button>
+      <Text size='4xl'>Hello</Text>
+      <View className='bg-red-400 size-12 rounded-full'></View>
       <ThemedView style={styles.stepContainer}>
         <ThemedText type='subtitle'>Step 1: Try it</ThemedText>
         <ThemedText>
