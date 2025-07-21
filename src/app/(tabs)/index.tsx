@@ -1,4 +1,4 @@
-import { Camera } from 'lucide-react-native';
+import { useMutation } from '@tanstack/react-query';
 
 import { Platform, StyleSheet, View } from 'react-native';
 
@@ -10,9 +10,23 @@ import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
 import { Button, ButtonIcon, ButtonText } from '@/shared/components/ui/button';
 import { Text } from '@/shared/components/ui/text';
+import { wait } from '@/shared/utils';
 
+import { Camera } from 'lucide-react-native';
 
 export default function HomeScreen() {
+  const mutation = useMutation({
+    mutationFn: () => wait(1000),
+    onSuccess: () => {
+      console.log('success');
+    },
+    meta: {
+      invalidateQueries: ['test'],
+    },
+    onError: () => {
+      console.log('error');
+    },
+  });
   return (
     <ParallaxScrollView
       headerBackgroundColor={{ light: '#A1CEDC', dark: '#1D3D47' }}

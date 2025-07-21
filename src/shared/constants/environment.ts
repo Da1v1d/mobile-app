@@ -2,7 +2,7 @@ import { Platform } from 'react-native';
 
 import Constants from 'expo-constants';
 
-import { ValueOf } from '../types/types';
+import { ValueOf } from '@/shared/types/types';
 
 // Check if running in Expo Go (StoreClient)
 export const IS_EXPO_GO = Constants.executionEnvironment === 'storeClient';
