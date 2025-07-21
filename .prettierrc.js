@@ -24,6 +24,7 @@ module.exports = {
     '^@react-navigation/(.*)$',
     '^expo(.*)$',
     '^@/(.*)$',
+    '^lucide-react-native',
     '^[./]',
   ],
   importOrderSeparation: true,

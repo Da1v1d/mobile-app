@@ -1,3 +1,5 @@
+import { Camera } from 'lucide-react-native';
+
 import { Platform, StyleSheet, View } from 'react-native';
 
 import { Image } from 'expo-image';
@@ -6,8 +8,9 @@ import { HelloWave } from '@/components/HelloWave';
 import ParallaxScrollView from '@/components/ParallaxScrollView';
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
-import { Button, ButtonText } from '@/shared/components/ui/button';
+import { Button, ButtonIcon, ButtonText } from '@/shared/components/ui/button';
 import { Text } from '@/shared/components/ui/text';
+
 
 export default function HomeScreen() {
   return (
@@ -24,8 +27,9 @@ export default function HomeScreen() {
         <ThemedText type='title'>Welcome!</ThemedText>
         <HelloWave />
       </ThemedView>
-      <Button action='primary' className='bg-red-400'>
+      <Button action='negative' variant='solid' className='rounded-xl'>
         <ButtonText>Click me</ButtonText>
+        <ButtonIcon classNameColor='white' as={() => <Camera color='white' size={20} />} />
       </Button>
       <Text size='4xl'>Hello</Text>
       <View className='bg-red-400 size-12 rounded-full'></View>
